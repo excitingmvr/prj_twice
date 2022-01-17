@@ -37,10 +37,22 @@
 		<td>2022.02.02</td>
 	</tr>
 	<tr>
+		<th class="table-active">국적</th>
+		<td>대한민국</td>
+		<th class="table-active">결혼</th>
+		<td>무</td>
+	</tr>
+	<tr>
 		<th class="table-active">이메일</th>
-		<td>asdfasdf@asdfasd.com <span class="badge bg-primary">email</span></td>
+		<td>asdfasdf@asdfasd.com <span class="badge bg-primary" data-bs-toggle="modal" href="#emailModalToggle" role="button">email</span></td>
 		<th class="table-active">핸드폰</th>
-		<td>010-9999-9999 <span class="badge bg-primary">SMS</span> <span class="badge bg-primary">Push</span></td>
+		<td>010-9999-9999 <span class="badge bg-primary" data-bs-toggle="modal" href="#smsModalToggle" role="button">SMS</span> <span class="badge bg-primary" data-bs-toggle="modal" href="#pushModalToggle" role="button">Push</span></td>
+	</tr>
+	<tr>
+		<th class="table-active">전화번호</th>
+		<td>02-999-9999</td>
+		<th class="table-active">팩스번호</th>
+		<td>02-9999-9997</td>
 	</tr>
 	<tr>
 		<th class="table-active">주소</th>
@@ -49,16 +61,184 @@
 			<p>서울특별시 강남구 어쩌구 저쩌구 상세 주소도 여기에</p>
 		</td>
 	</tr>
+	<tr>
+		<th class="table-active">홈페이지</th>
+		<td colspan="3">https://www.abc.com/excivitngasdf</td>
+	</tr>
+	<tr>
+		<th class="table-active">SMS</th>
+		<td colspan="3">
+			https://www.abc.com/excivitngasdf
+		</td>
+	</tr>
+	<tr>
+		<th class="table-active">비밀번호문제</th>
+		<td colspan="3">
+			최초로 다닌 초등학교는?
+		</td>
+	</tr>
+	<tr>
+		<th class="table-active">비밀번호문제 답</th>
+		<td colspan="3">
+			서울 무슨초등학교
+		</td>
+	</tr>
 	
 </table>
 
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
 
+<!-- button s -->
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <a href="./memberList.html"><button class="btn btn-secondary btn-sm" type="button">목록</button></a>
-  <a href="./memberForm.html"><button class="btn btn-primary btn-sm" type="button">수정</button></a>
-  <a href=""><button class="btn btn-danger btn-sm" type="button">삭제</button></a>
-  <a href=""><button class="btn btn-danger btn-sm" type="button">진짜삭제</button></a>
+  <a href="./memberForm.html"><button class="btn btn-primary btn-sm" type="button">수정</button></a>      
+  <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">삭제</button>
+  <button class="btn btn-danger btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal">진짜삭제</button>
 </div>
+<!-- button e -->
+
+<!-- modal s -->
+
+	<!-- delete s -->
+	<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="deleteModal">Delete!</h5>
+	        <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        Are you Sure?
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">delete</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- delete e -->
+
+	<!-- modal email s -->
+	<div class="modal fade" id="emailModalToggle" aria-hidden="true" aria-labelledby="emailModalToggle" tabindex="-1">
+	  <div class="modal-dialog modal-dialog-centered">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="emailModalToggle">Send Email</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="mb-3">
+	            <!-- <label for="recipient-name" class="col-form-label">Recipient:</label> -->
+	            <input type="text" class="form-control" id="recipient-name" placeholder="To" disabled>
+	          </div>
+	          <div class="mb-3">
+	            <!-- <label for="message-text" class="col-form-label">Message:</label> -->
+	            <textarea class="form-control" id="message-text" placeholder="Message: "></textarea>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary" data-bs-target="#emailModalToggle2" data-bs-toggle="modal">Send message</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal fade" id="emailModalToggle2" aria-hidden="true" aria-labelledby="emailModalToggle2" tabindex="-1">
+	  <div class="modal-dialog modal-dialog-centered">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="emailModalToggle2">Result Mail</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        Sended your Email!
+	      </div>
+	      <div class="modal-footer">
+	        <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button> -->
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- <a class="btn btn-priary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> -->
+	<!-- modal email e -->
+	
+	<!-- modal sms s -->
+	<div class="modal fade" id="smsModalToggle" aria-hidden="true" aria-labelledby="smsModalToggle" tabindex="-1">
+	  <div class="modal-dialog modal-dialog-centered">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="smsModalToggle">Send SMS</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="mb-3">
+	            <!-- <label for="recipient-name" class="col-form-label">Recipient:</label> -->
+	            <input type="text" class="form-control" id="recipient-name" placeholder="To" disabled>
+	          </div>
+	          <div class="mb-3">
+	            <!-- <label for="message-text" class="col-form-label">Message:</label> -->
+	            <textarea class="form-control" id="message-text" placeholder="Message: "></textarea>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary" data-bs-target="#smsModalToggle2" data-bs-toggle="modal">Send message</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal fade" id="smsModalToggle2" aria-hidden="true" aria-labelledby="smsModalToggle2" tabindex="-1">
+	  <div class="modal-dialog modal-dialog-centered">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="smsModalToggle2">Result SMS</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        Sended your SMS!
+	      </div>
+	      <div class="modal-footer">
+	        <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button> -->
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- modal sms e -->
+	
+	<!-- modal test s -->
+	<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Understood</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>	
+	<!-- modal test e -->
+
+<!-- modal e -->
+
+<!--  -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
