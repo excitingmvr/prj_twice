@@ -1,0 +1,42 @@
+/* common s */
+ 
+html {
+        font-size: 14px
+}
+ 
+/* common e */
+ 
+ 
+/* list s */
+ 
+.uc-nv-bg-color {
+    background-color: darkgrey;
+}
+ 
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+ 
+.nav-item a:hover {
+    color: black !important;
+}
+ 
+.dropdown-item {
+    color:dimgray !important;
+}
+ 
+.dropdown:hover >.dropdown-menu {
+    display: block;
+}
+ 
+/* list s */
+ 
+ 
+/* form s */
+ 
+.modal-dialog.uc-height {
+    height: 60%;
+}
+ 
+/* form e */
