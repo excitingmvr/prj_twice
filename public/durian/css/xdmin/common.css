@@ -3,6 +3,11 @@
 html {
         font-size: 14px
 }
+
+body {
+	
+	padding-top: 0px;	/* sidebar.css has 56px; */
+}
  
 /* common e */
  
